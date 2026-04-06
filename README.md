@@ -1,12 +1,32 @@
 Marketing Analytics Budget Optimization Agent
 Overview
 
-This project implements a minimal agent that allocates daily advertising budget across channels (Google, Facebook, TikTok) to maximize conversions using simple reasoning and a lightweight learning loop. The agent reads campaign performance data, evaluates channel efficiency, and recommends budget shifts while applying guardrails to ensure stable and realistic changes. A simple chat interface allows users to ask questions about performance and optimization decisions.
+This project implements a minimal agent that allocates daily advertising budget across channels (Google, Facebook, TikTok) to maximize conversions using simple reasoning and a lightweight learning loop. The agent reads campaign performance data, evaluates channel efficiency, and recommends budget shifts while applying guardrails to ensure stable and realistic changes.
 
- How to Run: Local (HTML)
-1. Download `chat_demo.html`
-2. Open in your browser
-3. Ask a question in the chat
+A simple chat interface allows users to ask questions about performance and optimization decisions.
+
+How to Run (Local HTML)
+Download chat_demo.html
+Open the file in any web browser
+Ask a question in the chat interface
+Workflow Snapshot
+
+Below is the n8n workflow used to process campaign data, update learned channel scores, optimize budget allocation, and evaluate results.
+
+![Workflow](N8N Workflow.png)
+
+Chat Interface
+
+The user interacts with the agent through a simple chat UI.
+
+![Chat UI](Start UI.png)
+
+Example Output
+
+Example response showing budget optimization reasoning and results.
+
+
+
 
 Features
 Reads campaign data from a CSV
@@ -16,11 +36,6 @@ Applies guardrails (minimum allocation, capped changes)
 Implements a lightweight learning loop (updates channel scores over time)
 Compares baseline vs optimized allocation
 Provides natural language explanations
-How to Run
-Download the HTML file (index.html or chat_demo.html)
-Open the file in any web browser
-Ask a question in the chat interface
-
 Data Assumptions
 3 channels: Google, Facebook, TikTok
 14–30 days of mock data
@@ -40,7 +55,10 @@ CVR = conversions / clicks
 CPA = spend / conversions
 Conversion per dollar = conversions / spend
 
-Budget allocation is based on channel performance, where higher-performing channels receive a larger share of the budget. The agent uses a lightweight learning loop to update channel scores over time using:
+Budget allocation is based on channel performance, where higher-performing channels receive a larger share of the budget.
+
+The agent uses a lightweight learning loop to update channel scores over time:
+
 new_score = 0.7 * previous_score + 0.3 * latest_performance
 
 Guardrails
