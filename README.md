@@ -3,7 +3,7 @@ Overview
 
 This project implements a minimal agent that allocates daily advertising budget across channels (Google, Facebook, TikTok) to maximize conversions using simple reasoning and a lightweight learning loop. The agent reads campaign performance data, evaluates channel efficiency, and recommends budget shifts while applying guardrails to ensure stable and realistic changes. A simple chat interface allows users to ask questions about performance and optimization decisions.
 
-# How to Run: Local (HTML)
+ How to Run: Local (HTML)
 1. Download `chat_demo.html`
 2. Open in your browser
 3. Ask a question in the chat
