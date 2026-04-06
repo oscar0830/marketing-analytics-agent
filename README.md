@@ -23,7 +23,7 @@ A simple chat interface allows users to ask questions about performance and opti
 ## How to Run
 
 ### Option 1: Local (HTML)
-1. Download `index.html`
+1. Download `chat_demo.html`
 2. Open in your browser
 3. Ask a question in the chat
 
